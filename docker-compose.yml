@@ -1,0 +1,12 @@
+---
+services:
+  web:
+    image: s3_api
+    working_dir: /usr/app/
+    command: npm start
+    volumes:
+    - ./:/usr/app
+    - /srv/data:/usr/data
+    ports:
+      - 3000:3000
+    restart: always
